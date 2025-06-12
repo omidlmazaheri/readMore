@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیشتر بخوانید</title>
+    <style>
+        * {
+            direction: rtl;
+            margin: 0;
+        }
+        #collapseBtn{
+            display: none;
+        }
+        article {
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .full-news {
+            display: none;
+            opacity: 0;
+            max-height: 0;
+            transition: opacity 0.5s ease, max-height 0.5s ease-in-out;
+        }
+
+        button {
+            margin: 10px auto;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="news-container">
+        <p class="news-text">این یک متن خلاصه است...</p>
+        <div class="full-news">
+            <p>اینجا متن کامل خبر قرار می‌گیرد که با کلیک روی دکمه "Read More" نمایش داده می‌شود.</p>
+        </div>
+        <button id="readMoreBtn" onclick="readmore()">بیشتر بخوانید</button>
+        <button id="collapseBtn" onclick="collapse()">بستن</button>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
